@@ -10,6 +10,7 @@ source $OMF_PATH/init.fish
 function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'
   bind \cs 'peco_ssh (commandline -b)'
+  bind \cq 'peco_ghq (commandline -b)'
 end
 
 #function fish_user_key_bindings
