@@ -1,15 +1,9 @@
 function peco_select_history
-  if test (count $argv) = 0
-    set peco_flags
-  else
-    set peco_flags --query "$argv"
-  end
+  set peco_flags --query "$argv"
 
   history|peco $peco_flags|read line
 
   if [ $line ]
     commandline $line
-  else
-    commandline ''
   end
 end
